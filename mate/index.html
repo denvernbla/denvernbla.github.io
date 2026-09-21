@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="华为Mate 8最新价格走势、二手报价及购买指南。包含全网官方旗舰店报价、电商平台比价、成色评估标准及购买注意事项，助您以合理价格购入心仪手机。">
+    <meta name="keywords" content="mate8价格,华为mate8报价,二手mate8多少钱,mate8官方价格,华为mate8最新报价">
+    <title>mate8价格-全网报价与购买指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #c7000b;
+            --secondary-color: #e0e0e0;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f5f7fa;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 15px;
+            color: var(--text-gray);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Price Cards Grid */
+        .price-section {
+            padding-bottom: 60px;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 24px;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-top: 5px;
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .price-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .price-card:hover {
+            transform: translateY(-4px);
+            border-color: #eee;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background-color: #ffebeb;
+            color: var(--primary-color);
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .price-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .price-card .subtitle {
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-bottom: 16px;
+        }
+
+        .price-display {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .price-display small {
+            font-size: 14px;
+            font-weight: normal;
+            color: var(--text-gray);
+            margin-left: 4px;
+        }
+
+        .price-features {
+            margin-bottom: 20px;
+        }
+
+        .price-features li {
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+        }
+
+        .price-features li::before {
+            content: "✓";
+            color: #28a745;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #a00009;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--text-gray);
+            color: var(--text-dark);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-dark);
+            background: #f9f9f9;
+        }
+
+        /* Comparison Table */
+        .comparison-container {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        td {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .price-highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .guide-content h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .guide-content p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 12px;
+        }
+
+        .checklist-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .checklist-icon {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-item h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .faq-item p {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #999;
+            padding: 40px 0;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price-display {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>📱</span> Mate8价格查询
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">最新报价</a></li>
+                    <li><a href="#guide">购买指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#comparison">参数对比</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>华为Mate 8 价格参考</h1>
+                <p>全面了解华为Mate 8当前市场行情，包含全网官方渠道、电商平台及二手成色报价，助您做出明智购买决策。</p>
+            </div>
+        </section>
+
+        <section class="container price-section" id="prices">
+            <div class="section-header">
+                <h2>当前市场主流报价</h2>
+                <p>数据仅供参考，实际价格因成色、库存及活动波动</p>
+            </div>
+
+            <div class="price-grid">
+                <!-- Official Store -->
+                <article class="price-card">
+                    <span class="card-tag">官方渠道</span>
+                    <h3>华为官方商城</h3>
+                    <p class="subtitle">全新原装正品，享受官方保修</p>
+                    <div class="price-display">
+                        ¥2,500 <small>起</small>
+                    </div>
+                    <ul class="price-features">
+                        <li>全新未激活</li>
+                        <li>全国联保1年</li>
+                        <li>官方正品发票</li>
+                        <li>完整包装配件</li>
+                    </ul>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="#" class="btn btn-primary" style="flex:1">查看详情</a>
+                        <a href="#" class="btn btn-outline" style="flex:1">预约购买</a>
+                    </div>
+                </article>
+
+                <!-- JD.com -->
+                <article class="price-card">
+                    <span class="card-tag">京东自营</span>
+                    <h3>京东自营旗舰店</h3>
+                    <p class="subtitle">物流快，售后有保障，库存较少</p>
+                    <div class="price-display">
+                        ¥2,400 <small>起</small>
+                    </div>
+                    <ul class="price-features">
+                        <li>京东自营配送</li>
+                        <li>7天无理由退换</li>
+                        <li>官方质保服务</li>
+                        <li>库存紧张需抢购</li>
+                    </ul>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="#" class="btn btn-primary" style="flex:1">去抢购</a>
+                        <a href="#" class="btn btn-outline" style="flex:1">加入购物车</a>
+                    </div>
+                </article>
+
+                <!-- Second Hand -->
+                <article class="price-card">
+                    <span class="card-tag">二手/闲鱼</span>
+                    <h3>个人卖家成色</h3>
+                    <p class="subtitle">屏幕有划痕，电池衰减，适合备用机</p>
+                    <div class="price-display">
+                        ¥800 <small>起</small>
+                    </div>
+                    <ul class="price-features">
+                        <li>个人一手闲置</li>
+                        <li>价格可谈</li>
+                        <li>需验机确认</li>
+                        <li>无官方保修</li>
+                    </ul>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="#" class="btn btn-primary" style="flex:1">查看闲鱼</a>
+                        <a href="#" class="btn btn-outline" style="flex:1">验机工具</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Detailed Table -->
+            <div class="comparison-container" id="comparison">
+                <h3 style="margin-bottom: 20px; font-size: 18px;">详细价格与成色参考</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>销售渠道</th>
+                            <th>成色描述</th>
+                            <th>预估价格</th>
+                            <th>保修情况</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>华为官方商城</td>
+                            <td>全新机</td>
+                            <td class="price-highlight">¥2,500 - ¥3,000</td>
+                            <td>官方一年保修</td>
+                            <td>偶尔有活动折扣</td>
+                        </tr>
+                        <tr>
+                            <td>天猫旗舰店</td>
+                            <td>全新机</td>
+                            <td class="price-highlight">¥2,400 - ¥2,800</td>
+                            <td>官方一年保修</td>
+                            <td>需关注店铺优惠券</td>
+                        </tr>
+                        <tr>
+                            <td>京东自营</td>
+                            <td>全新机</td>
+                            <td class="price-highlight">¥2,300 - ¥2,600</td>
+                            <td>官方一年保修</td>
+                            <td>发货速度最快</td>
+                        </tr>
+                        <tr>
+                            <td>9成新个人</td>
+                            <td>无拆修，有轻微使用痕迹</td>
+                            <td class="price-highlight">¥1,200 - ¥1,500</td>
+                            <td>卖家自保</td>
+                            <td>电池健康度需检查</td>
+                        </tr>
+                        <tr>
+                            <td>7成新个人</td>
+                            <td>有划痕、掉漆，屏幕可能有碎</td>
+                            <td class="price-highlight">¥600 - ¥900</td>
+                            <td>卖家自保</td>
+                            <td>仅适合作为备用机</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="guide-section" id="guide">
+            <div class="container">
+                <div class="section-header">
+                    <h2>购买 Mate 8 指南</h2>
+                    <p>如何判断当前价格是否合理？选购时需要注意哪些细节？</p>
+                </div>
+                
+                <div class="guide-grid">
+                    <div class="guide-content">
+                        <h3>成色判断标准</h3>
+                        <p>购买二手 Mate 8 时，建议重点检查以下几点：</p>
+                        <div class="checklist-item">
+                            <span class="checklist-icon">1.</span>
+                            <div>
+                                <strong>屏幕与边框：</strong>Mate 8 边框较宽，检查是否有明显的磕碰凹陷，屏幕是否有坏点或漏光。
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <span class="checklist-icon">2.</span>
+                            <div>
+                                <strong>电池健康度：</strong>由于该机型发布已久，电池老化严重，建议使用专业工具检测循环次数，<strong>低于80%建议更换电池</strong>。
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <span class="checklist-icon">3.</span>
+                            <div>
+                                <strong>指纹识别：</strong>Mate 8 的指纹识别体验较好，检查是否灵敏，中心区域是否有磨损。
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <span class="checklist-icon">4.</span>
+                            <div>
+                                <strong>系统版本：</strong>确认是否为官方系统，检查是否有锁机或ID锁情况。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-content">
+                        <h3>当前购买建议</h3>
+                        <p>如果您正在寻找一台备用机或入门安卓机，Mate 8 依然具备不错的续航能力（4000mAh大电池）和麒麟950芯片性能。</p>
+                        <br>
+                        <h3>避坑提示</h3>
+                        <ul style="list-style: disc; padding-left: 20px; margin-top: 10px;">
+                            <li style="margin-bottom: 8px;">警惕远低于市场价的所谓“完美无修”机器，可能是翻新机。</li>
+                            <li style="margin-bottom: 8px;">确认是否支持全网通（移动/联通/电信）。</li>
+                            <li>购买前务必要求卖家当面视频验机。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="faq" style="padding-bottom: 60px;">
+            <div class="section-header">
+                <h2>常见问题 (FAQ)</h2>
+            </div>
+            
+            <div class="price-grid">
+                <div class="price-card" style="padding: 20px;">
+                    <h3>Mate 8 现在还值得买吗？</h3>
+                    <p>作为一款发布于2015年的机型，Mate 8 现在的定位主要是备用机或入门体验机。如果您对性能要求不高，仅用于通话、微信和轻度娱乐，且预算有限，Mate 8 依然可以胜任。</p>
+                </div>
+                <div class="price-card" style="padding: 20px;">
+                    <h3>二手 Mate 8 大概多少钱？</h3>
+                    <p>目前市场行情，成色好的 9成新机器大约在 1200-1500 元左右，7成新及屏幕有划痕的机器价格在 600-900 元之间。具体价格视成色和渠道而定。</p>
+                </div>
+                <div class="price-card" style="padding: 20px;">
+                    <h3>Mate 8 和 Mate 9 价格差多少？</h3>
+                    <p>Mate 9 目前全新机价格通常在 1500-2000 元左右。相比 Mate 8，Mate 9 在处理器性能、拍照和充电速度上有明显提升，如果您预算允许，建议优先考虑 Mate 9。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>关于本站</h4>
+                <p>本站致力于提供准确、客观的手机价格查询与购买指南，数据来源于市场监测。</p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">华为官网</a></li>
+                    <li><a href="#">京东自营</a></li>
+                    <li><a href="#">闲鱼验机</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>免责声明</h4>
+                <p>所有价格信息仅供参考，实际购买价格以电商平台实时显示为准。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
