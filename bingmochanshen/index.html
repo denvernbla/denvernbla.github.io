@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="病魔缠身 - 专业医疗健康知识库与疾病预防指南。提供常见疾病症状解析、就医建议、康复护理及心理健康支持，帮助患者及家属科学应对疾病挑战。">
+    <meta name="keywords" content="病魔缠身,疾病预防,医疗指南,症状解析,康复护理,心理健康">
+    <title>病魔缠身-科学应对疾病挑战与健康管理指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c7be5;
+            --secondary-color: #00d97e;
+            --accent-color: #e63757;
+            --text-dark: #0f172a;
+            --text-gray: #64748b;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-color: #e2e8f0;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-gray);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: #1a5bbd;
+            color: white;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 10px;
+            border-radius: 50px;
+            display: inline-flex;
+            box-shadow: var(--shadow-md);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            outline: none;
+            border-radius: 50px;
+        }
+
+        .search-box button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .search-box button:hover {
+            background-color: #00b368;
+        }
+
+        /* 症状自查卡片 */
+        .symptoms-section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+        }
+
+        .symptom-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .symptom-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .symptom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .symptom-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .symptom-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .symptom-card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        .symptom-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* 就医指南 */
+        .guide-section {
+            background-color: var(--bg-white);
+            padding: 60px 0;
+        }
+
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .guide-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .guide-content p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        .guide-steps {
+            margin-top: 30px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .step-text p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 0;
+        }
+
+        .guide-image {
+            background-color: #eef2ff;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .guide-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* 康复与心理 */
+        .recovery-section {
+            padding: 60px 0;
+            background-color: #f1f5f9;
+        }
+
+        .recovery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .recovery-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .recovery-img {
+            height: 200px;
+            background-color: #cbd5e1;
+            position: relative;
+        }
+        
+        .recovery-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .recovery-body {
+            padding: 25px;
+        }
+
+        .recovery-body h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .recovery-body p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #f1f5f9;
+            color: var(--text-gray);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 60px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: var(--bg-white);
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-gray);
+            display: none;
+            border-top: 1px solid var(--border-color);
+            margin-top: 10px;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .recovery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <span>病魔缠身</span>百科
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#symptoms">症状自查</a></li>
+                    <li><a href="#guide">就医指南</a></li>
+                    <li><a href="#recovery">康复护理</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button">在线咨询</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 区域 -->
+        <section class="hero">
+            <div class="container">
+                <h1>当病魔缠身，科学应对是关键</h1>
+                <p>面对突发或长期的健康困扰，保持冷静、了解症状、及时就医是战胜疾病的第一步。我们提供全面的医疗资讯与护理指南。</p>
+                <div class="search-box">
+                    <input type="text" placeholder="输入症状或疾病名称（如：发烧、高血压、糖尿病）...">
+                    <button>搜索指南</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 症状自查 -->
+        <section id="symptoms" class="symptoms-section container">
+            <div class="section-header">
+                <h2>常见症状快速索引</h2>
+                <p>出现不适时，请根据以下常见症状进行初步参考，切勿替代专业医疗诊断。</p>
+            </div>
+            <div class="symptom-grid">
+                <article class="symptom-card">
+                    <span class="symptom-icon">🔥</span>
+                    <h3>发热与流感</h3>
+                    <p>持续高烧、畏寒、肌肉酸痛是典型表现。注意补充水分，必要时服用退烧药并监测体温。</p>
+                    <a href="#" class="symptom-link">查看详情 &rarr;</a>
+                </article>
+                <article class="symptom-card">
+                    <span class="symptom-icon">🤢</span>
+                    <h3>消化道不适</h3>
+                    <p>恶心、呕吐、腹泻可能由饮食不当或感染引起。重点在于预防脱水和调整饮食结构。</p>
+                    <a href="#" class="symptom-link">查看详情 &rarr;</a>
+                </article>
+                <article class="symptom-card">
+                    <span class="symptom-icon">🫁</span>
+                    <h3>呼吸系统问题</h3>
+                    <p>咳嗽、胸闷、呼吸困难需高度警惕。保持室内通风，避免接触刺激性气体，及时就医。</p>
+                    <a href="#" class="symptom-link">查看详情 &rarr;</a>
+                </article>
+                <article class="symptom-card">
+                    <span class="symptom-icon">🧠</span>
+                    <h3>头痛与头晕</h3>
+                    <p>长期偏头痛或突发剧烈头痛可能涉及神经系统。避免过度用眼，保证充足睡眠。</p>
+                    <a href="#" class="symptom-link">查看详情 &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 就医指南 -->
+        <section id="guide" class="guide-section">
+            <div class="container">
+                <div class="guide-layout">
+                    <div class="guide-content">
+                        <h2>科学就医流程指南</h2>
+                        <p>当身体出现异常信号时，正确的就医路径能有效缩短诊断时间，提高治疗效果。请遵循以下步骤：</p>
+                        
+                        <div class="guide-steps">
+                            <div class="step-item">
+                                <div class="step-number">1</div>
+                                <div class="step-text">
+                                    <h4>症状记录与整理</h4>
+                                    <p>详细记录发病时间、持续时长、诱因（如饮食、劳累）及缓解因素，便于医生快速判断。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">2</div>
+                                <div class="step-text">
+                                    <h4>选择正规科室</h4>
+                                    <p>根据主要症状挂相应科室。如内科、外科、急诊科等，避免盲目挂错导致重复检查。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">3</div>
+                                <div class="step-text">
+                                    <h4>配合检查与沟通</h4>
+                                    <p>遵医嘱进行验血、影像学检查，并如实告知医生既往病史和过敏史。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-image">
+                        <img src="https://picsum.photos/seed/medical1/600/400" alt="医生与患者沟通场景">
+                        <p style="margin-top:15px; font-size:0.9rem; color:var(--text-gray);">图示：医患沟通与检查场景</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 康复与护理 -->
+        <section id="recovery" class="recovery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>康复护理与心理支持</h2>
+                    <p>战胜病魔不仅是身体的修复，更是心理的重塑。科学的康复计划能加速恢复进程。</p>
+                </div>
+                <div class="recovery-grid">
+                    <article class="recovery-card">
+                        <div class="recovery-img">
+                            <img src="https://picsum.photos/seed/health2/400/300" alt="健康饮食">
+                        </div>
+                        <div class="recovery-body">
+                            <h3>科学营养膳食</h3>
+                            <p>病后饮食应以清淡、易消化、高蛋白为主，少食多餐，避免辛辣刺激，帮助身体机能恢复。</p>
+                            <span class="tag">营养建议</span>
+                        </div>
+                    </article>
+                    <article class="recovery-card">
+                        <div class="recovery-img">
+                            <img src="https://picsum.photos/seed/yoga3/400/300" alt="适度运动">
+                        </div>
+                        <div class="recovery-body">
+                            <h3>适度康复运动</h3>
+                            <p>根据医生建议进行适度的肢体活动或康复训练，防止肌肉萎缩，促进血液循环。</p>
+                            <span class="tag">运动康复</span>
+                        </div>
+                    </article>
+                    <article class="recovery-card">
+                        <div class="recovery-img">
+                            <img src="https://picsum.photos/seed/meditation4/400/300" alt="心理健康">
+                        </div>
+                        <div class="recovery-body">
+                            <h3>保持积极心态</h3>
+                            <p>焦虑和恐惧会降低免疫力。通过与家人沟通、参与康复社群或心理咨询来调节情绪。</p>
+                            <span class="tag">心理调适</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq-section container">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">Q: 病魔缠身时应该立即去急诊吗？</button>
+                <div class="faq-answer">
+                    A: 如果出现呼吸困难、胸痛、大出血、意识模糊或持续高烧不退等危急症状，应立即前往急诊。其他非紧急症状可先咨询在线医生或前往门诊。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Q: 在家护理时需要注意哪些事项？</button>
+                <div class="faq-answer">
+                    A: 需要保持环境清洁通风，定时测量生命体征，严格执行医嘱用药，并密切观察病情变化。一旦发现恶化迹象，应立即就医。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Q: 如何预防疾病复发？</button>
+                <div class="faq-answer">
+                    A: 坚持健康的生活方式，包括规律作息、均衡饮食、适度运动和定期体检。同时，避免接触已知的致病诱因。
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>病魔缠身百科</h3>
+                    <p>致力于提供权威、易懂的医疗健康资讯，帮助大众科学认知疾病，积极应对健康挑战。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">症状自查</a></li>
+                        <li><a href="#">就医指南</a></li>
+                        <li><a href="#">康复护理</a></li>
+                        <li><a href="#">健康资讯</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持服务</h4>
+                    <ul>
+                        <li><a href="#">在线咨询</a></li>
+                        <li><a href="#">预约挂号</a></li>
+                        <li><a href="#">健康评估</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 病魔缠身百科网. 仅供科普参考，不作为诊疗依据。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                
+                // 关闭其他打开的项
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+
+                // 切换当前项
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+                  </html>
