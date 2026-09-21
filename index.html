@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="蜜桃3官方正版平台，提供高清正版影视资源、独家动漫剧集及小说阅读服务，致力于为用户打造最优质的文化娱乐体验。">
+    <meta name="keywords" content="蜜桃3,影视资源,动漫在线,正版阅读,高清视频">
+    <title>蜜桃3-正版影视动漫与小说阅读平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b81;
+            --primary-hover: #ff4757;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-sub: #57606f;
+            --border-color: #e1e1e1;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-color);
+            background: transparent;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #fff0f3 0%, #ffe3e3 100%);
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: rgba(255, 107, 129, 0.1);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: var(--text-sub);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 24px;
+            color: var(--text-main);
+        }
+
+        .stat-item p {
+            font-size: 13px;
+            margin: 0;
+            color: var(--text-sub);
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(255, 107, 129, 0.2);
+        }
+
+        /* Categories Grid */
+        .categories-section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--primary-color);
+        }
+
+        .cat-icon {
+            height: 100px;
+            background-color: #f1f2f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .cat-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .cat-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cat-desc {
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+
+        /* Content Tabs */
+        .content-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .tab-item {
+            padding: 15px 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-sub);
+            position: relative;
+        }
+
+        .tab-item.active {
+            color: var(--primary-color);
+        }
+
+        .tab-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .media-card {
+            group: 'card';
+        }
+
+        .card-cover {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 2/3;
+            margin-bottom: 12px;
+            background-color: #eee;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .card-cover:hover img {
+            transform: scale(1.05);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card-cover:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+
+        .card-info h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: var(--text-sub);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: var(--bg-color);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-item {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: #b2bec3;
+            font-size: 14px;
+            margin-top: 15px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #b2bec3;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #636e72;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #b2bec3;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero p {
+                margin: 0 auto 30px;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>🍑</span>蜜桃3
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#">热门动漫</a>
+                <a href="#">高清影视</a>
+                <a href="#">小说阅读</a>
+                <a href="#">会员中心</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">登录</a>
+                <a href="#" class="btn btn-primary">注册</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="hero-tag">全网独家正版授权</span>
+                    <h1>探索无限视界，<br>尽在<span>蜜桃3</span>娱乐平台</h1>
+                    <p>汇集最新热门动漫剧集、高清影视大片及精品小说资源。为您提供流畅、高清、安全的在线观看与阅读体验，打造属于您的专属娱乐空间。</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>10W+</h3>
+                            <p>正版动漫</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5W+</h3>
+                            <p>高清影视</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>1000+</h3>
+                            <p>精品小说</p>
+                        </div>
+                    </div>
+                    <div class="hero-btns">
+                        <a href="#" class="btn btn-primary" style="padding: 12px 30px; font-size: 16px;">立即开始</a>
+                        <a href="#" class="btn btn-outline" style="padding: 12px 30px; font-size: 16px;">了解更多</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/mango3_hero/600/400" alt="蜜桃3平台推荐内容">
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">内容分类</h2>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="cat-icon">🎬</div>
+                        <div class="cat-content">
+                            <div class="cat-title">热播影视</div>
+                            <div class="cat-desc">最新上映电影与电视剧</div>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="cat-icon">🎌</div>
+                        <div class="cat-content">
+                            <div class="cat-title">日韩动漫</div>
+                            <div class="cat-desc">独家引进高清番剧</div>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="cat-icon">📖</div>
+                        <div class="cat-content">
+                            <div class="cat-title">热门小说</div>
+                            <div class="cat-desc">完结与连载精品</div>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="cat-icon">🎮</div>
+                        <div class="cat-content">
+                            <div class="cat-title">二次元周边</div>
+                            <div class="cat-desc">同人图集与资讯</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Tabs -->
+        <section class="content-section">
+            <div class="container">
+                <div class="tabs">
+                    <div class="tab-item active" onclick="switchTab('anime')">热门动漫</div>
+                    <div class="tab-item" onclick="switchTab('movie')">高清影视</div>
+                    <div class="tab-item" onclick="switchTab('novel')">最新小说</div>
+                </div>
+
+                <!-- Anime Tab -->
+                <div id="anime" class="tab-content active">
+                    <div class="media-grid">
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/anime1/300/450" alt="动漫封面">
+                                <div class="play-overlay"><div class="play-icon">▶</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>绯红之境：觉醒</h3>
+                                <div class="card-meta">
+                                    <span>更新至12集</span>
+                                    <span>9.8分</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/anime2/300/450" alt="动漫封面">
+                                <div class="play-overlay"><div class="play-icon">▶</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>星际少年行</h3>
+                                <div class="card-meta">
+                                    <span>连载中</span>
+                                    <span>9.5分</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/anime3/300/450" alt="动漫封面">
+                                <div class="play-overlay"><div class="play-icon">▶</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>魔法学院日记</h3>
+                                <div class="card-meta">
+                                    <span>更新至05集</span>
+                                    <span>9.2分</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/anime4/300/450" alt="动漫封面">
+                                <div class="play-overlay"><div class="play-icon">▶</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>都市传说录</h3>
+                                <div class="card-meta">
+                                    <span>已完结</span>
+                                    <span>9.0分</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Movie Tab -->
+                <div id="movie" class="tab-content">
+                    <div class="media-grid">
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/movie1/300/450" alt="影视封面">
+                                <div class="play-overlay"><div class="play-icon">▶</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>深海探险：未知的深渊</h3>
+                                <div class="card-meta">
+                                    <span>2023 热映</span>
+                                    <span>8.9分</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/movie2/300/450" alt="影视封面">
+                                <div class="play-overlay"><div class="play-icon">▶</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>时光机器：回到未来</h3>
+                                <div class="card-meta">
+                                    <span>经典科幻</span>
+                                    <span>9.1分</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/movie3/300/450" alt="影视封面">
+                                <div class="play-overlay"><div class="play-icon">▶</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>无声的告别</h3>
+                                <div class="card-meta">
+                                    <span>剧情片</span>
+                                    <span>8.5分</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/movie4/300/450" alt="影视封面">
+                                <div class="play-overlay"><div class="play-icon">▶</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>极速追击</h3>
+                                <div class="card-meta">
+                                    <span>动作片</span>
+                                    <span>8.7分</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Novel Tab -->
+                <div id="novel" class="tab-content">
+                    <div class="media-grid">
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/novel1/300/450" alt="小说封面">
+                                <div class="play-overlay"><div class="play-icon">📖</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>我在异界开超市</h3>
+                                <div class="card-meta">
+                                    <span>都市/奇幻</span>
+                                    <span>500万字</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/novel2/300/450" alt="小说封面">
+                                <div class="play-overlay"><div class="play-icon">📖</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>深渊凝视者</h3>
+                                <div class="card-meta">
+                                    <span>悬疑/惊悚</span>
+                                    <span>120万字</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/novel3/300/450" alt="小说封面">
+                                <div class="play-overlay"><div class="play-icon">📖</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>最后的一抹夕阳</h3>
+                                <div class="card-meta">
+                                    <span>言情/虐心</span>
+                                    <span>80万字</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="media-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/novel4/300/450" alt="小说封面">
+                                <div class="play-overlay"><div class="play-icon">📖</div></div>
+                            </div>
+                            <div class="card-info">
+                                <h3>赛博纪元：觉醒</h3>
+                                <div class="card-meta">
+                                    <span>科幻/机甲</span>
+                                    <span>300万字</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🚀</div>
+                        <h3>极速播放</h3>
+                        <p>智能CDN节点分发，毫秒级缓冲，支持4K超清画质，告别卡顿。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <h3>安全纯净</h3>
+                        <p>无广告插件干扰，绿色无毒，保护您的设备安全与隐私。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h3>多端同步</h3>
+                        <p>支持手机、平板、电脑多端登录，观看记录自动同步，随时随地畅享。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span>🍑</span>蜜桃3
+                    </a>
+                    <p>致力于为全球用户提供最优质的正版动漫、影视及小说内容，打造数字娱乐新生态。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">平台介绍</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>内容服务</h4>
+                    <ul>
+                        <li><a href="#">动漫专区</a></li>
+                        <li><a href="#">影视专区</a></li>
+                        <li><a href="#">小说专区</a></li>
+                        <li><a href="#">VIP会员</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">用户协议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 蜜桃3平台 版权所有 | 本站内容均为用户上传或整理，仅供学习交流使用。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            // Remove active class from all tabs and contents
+            const tabs = document.querySelectorAll('.tab-item');
+            const contents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            event.target.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+          </html>
