@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鲁尼年薪-足球运动员薪资数据与职业生涯财务分析</title>
+    <meta name="description" content="提供鲁尼（Wayne Rooney）历年薪资数据、转会费统计、职业生涯总收入及合同详情分析。涵盖曼联、埃弗顿、华盛顿联等球队时期的薪资变化，帮助球迷了解顶级球星的财务状况。">
+    <meta name="keywords" content="鲁尼年薪,韦恩·鲁尼薪资,鲁尼工资,鲁尼转会费,鲁尼职业生涯收入,英超球员薪资">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #c8102e; /* 曼联红 */
+            --secondary-color: #1a237e; /* 深蓝 */
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f5f7fa;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #0d47a1 100%);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Stats Overview */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 5px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            font-weight: normal;
+        }
+
+        /* Salary Table */
+        .table-container {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #fafafa;
+        }
+
+        .club-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        .club-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+
+        .salary-highlight {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Sidebar */
+        aside .info-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-gray);
+        }
+
+        .info-list li strong {
+            color: var(--text-dark);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 20px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .faq-answer {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #eceff1;
+            padding: 50px 0 20px;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #b0bec5;
+            font-size: 0.9rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #37474f;
+            color: #78909c;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+                <span>SoccerPay</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">数据首页</a></li>
+                    <li><a href="#">球员榜单</a></li>
+                    <li><a href="#">历史数据</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <h1>鲁尼年薪</h1>
+                <p>深入解析韦恩·鲁尼（Wayne Rooney）职业生涯的薪资变化、转会成本与累计收入。从埃弗顿青训到曼联传奇，揭秘顶级球星背后的财务数据。</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Stats Overview -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">€5.5亿</span>
+                    <span class="stat-label">职业生涯总收入</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">£300万+</span>
+                    <span class="stat-label">曼联最高周薪</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">2003-2017</span>
+                    <span class="stat-label">效力曼联总时长</span>
+                </div>
+            </section>
+
+            <!-- Main Content -->
+            <div class="content-grid">
+                <!-- Left: Table -->
+                <section>
+                    <div class="section-title">
+                        <h2>职业生涯薪资明细</h2>
+                        <a href="#">查看完整榜单 &rarr;</a>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>赛季</th>
+                                    <th>效力球队</th>
+                                    <th>周薪 (英镑)</th>
+                                    <th>年薪 (英镑)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2004/05</td>
+                                    <td>
+                                        <div class="club-name">
+                                            <span class="club-icon">EVE</span> 埃弗顿
+                                        </div>
+                                    </td>
+                                    <td>约 35,000</td>
+                                    <td>约 180万</td>
+                                </tr>
+                                <tr>
+                                    <td>2005/06</td>
+                                    <td>
+                                        <div class="club-name">
+                                            <span class="club-icon">EVE</span> 埃弗顿
+                                        </div>
+                                    </td>
+                                    <td>约 50,000</td>
+                                    <td>约 260万</td>
+                                </tr>
+                                <tr>
+                                    <td>2006/07</td>
+                                    <td>
+                                        <div class="club-name">
+                                            <span class="club-icon">MUN</span> 曼联
+                                        </div>
+                                    </td>
+                                    <td>约 60,000</td>
+                                    <td>约 310万</td>
+                                </tr>
+                                <tr>
+                                    <td>2011/12</td>
+                                    <td>
+                                        <div class="club-name">
+                                            <span class="club-icon">MUN</span> 曼联
+                                        </div>
+                                    </td>
+                                    <td>约 250,000</td>
+                                    <td class="salary-highlight">约 1300万</td>
+                                </tr>
+                                <tr>
+                                    <td>2014/15</td>
+                                    <td>
+                                        <div class="club-name">
+                                            <span class="club-icon">MUN</span> 曼联
+                                        </div>
+                                    </td>
+                                    <td>约 300,000</td>
+                                    <td class="salary-highlight">约 1560万</td>
+                                </tr>
+                                <tr>
+                                    <td>2017/18</td>
+                                    <td>
+                                        <div class="club-name">
+                                            <span class="club-icon">DCU</span> 华盛顿联
+                                        </div>
+                                    </td>
+                                    <td>约 325,000</td>
+                                    <td>约 1700万</td>
+                                </tr>
+                                <tr>
+                                    <td>2018/19</td>
+                                    <td>
+                                        <div class="club-name">
+                                            <span class="club-icon">DLY</span> 德比郡
+                                        </div>
+                                    </td>
+                                    <td>约 100,000</td>
+                                    <td>约 520万</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Right: Sidebar -->
+                <aside>
+                    <div class="info-card">
+                        <h3>转会市场价值</h3>
+                        <ul class="info-list">
+                            <li><strong>2004年转会费：</strong>2700万英镑（创当时英超纪录）</li>
+                            <li><strong>生涯总身价：</strong>约 6500万欧元</li>
+                            <li><strong>最高单赛季收入：</strong>2017年在华盛顿联（含奖金）</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>商业价值</h3>
+                        <ul class="info-list">
+                            <li><strong>代言品牌：</strong>耐克、阿迪达斯等顶级运动品牌</li>
+                            <li><strong>个人品牌：</strong>Wayne Rooney Clothing</li>
+                            <li><strong>退役后收入：</strong>主要来源于解说、评论及商业活动</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">鲁尼在曼联的年薪是多少？</div>
+                    <div class="faq-answer">
+                        鲁尼在曼联效力期间，周薪最高曾达到30万英镑。这意味着他每年的基本收入约为1560万英镑（税前），是当时英超薪资榜的顶级水平。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">鲁尼职业生涯总身价最高是多少？</div>
+                    <div class="faq-answer">
+                        根据转会市场数据，鲁尼职业生涯总身价最高时约为6500万欧元，主要发生在他在曼联效力后期。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">退役后鲁尼的收入来源主要有哪些？</div>
+                    <div class="faq-answer">
+                        退役后，鲁尼的收入主要来源于担任体育解说员（如ESPN、天空体育）、担任德比郡足球俱乐部老板以及各类商业代言活动。
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>SoccerPay</h4>
+                    <p style="font-size: 0.9rem; color: #b0bec5; line-height: 1.8;">
+                        专注提供全球足球运动员薪资数据、转会历史及职业生涯财务分析。致力于为球迷和分析师提供准确、透明的数据服务。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>数据栏目</h4>
+                    <ul>
+                        <li><a href="#">英超薪资榜</a></li>
+                        <li><a href="#">西甲薪资榜</a></li>
+                        <li><a href="#">德甲薪资榜</a></li>
+                        <li><a href="#">意甲薪资榜</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">数据来源说明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系合作</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 SoccerPay 数据中心. All rights reserved. 本站数据仅供参考，不作为投资依据。
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
