@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩佩泉 - 原创音乐人、舞台表演艺术家与潮流引领者</title>
+    <meta name="description" content="韩佩泉（Hanni）个人官方网站。收录韩佩泉的音乐作品、舞台表演视频、综艺节目片段、个人写真及时尚穿搭。提供关于韩佩泉的职业生涯回顾、音乐风格解析及粉丝互动指南。">
+    <meta name="keywords" content="韩佩泉, Hanni, 原创音乐人, 舞台表演, 综艺, 潮流, 音乐作品">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #ff3366;
+            --bg-color: #f8f8f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #e62e5b;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 4rem 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-sub);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background-color: #eee;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        /* Works Section */
+        .works-section {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-card {
+            background: var(--bg-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .work-thumb {
+            height: 200px;
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .work-info {
+            padding: 1.5rem;
+        }
+
+        .work-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-info p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* Performance Highlights */
+        .highlights-section {
+            padding: 4rem 0;
+        }
+
+        .highlight-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .highlight-item {
+            display: flex;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .highlight-date {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .highlight-date .day {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .highlight-date .year {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .highlight-content {
+            padding: 1.5rem;
+            flex: 1;
+        }
+
+        .highlight-content h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-content p {
+            color: var(--text-sub);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            color: var(--text-sub);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+            font-weight: 300;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #999;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .social-links a {
+            margin-left: 1rem;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .highlight-item {
+                flex-direction: column;
+            }
+
+            .highlight-date {
+                flex-direction: row;
+                gap: 1rem;
+                padding: 1rem;
+                width: 100%;
+            }
+            
+            .highlight-date .day {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">HAN<span>NI</span></a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#works">作品</a></li>
+                    <li><a href="#highlights">动态</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <h1>韩佩泉<br>Hanni</h1>
+                <p>打破常规的舞台表演者 | 独立音乐创作者 | 潮流文化先锋</p>
+                <div class="cta-buttons">
+                    <a href="#works" class="btn btn-primary">聆听音乐</a>
+                    <a href="#highlights" class="btn btn-outline">观看舞台</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section container">
+            <h2 class="section-title">关于韩佩泉</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/hanni_about/600/400" alt="韩佩泉工作照">
+                </div>
+                <div class="about-text">
+                    <p>韩佩泉，艺名Hanni，一位以独特舞台魅力和原创音乐才华著称的表演艺术家。他/她不拘泥于传统偶像框架，将摇滚精神与潮流美学完美融合，在舞台上塑造了极具辨识度的个人形象。</p>
+                    <p>从地下音乐场景到主流综艺舞台，Hanni始终坚持自我表达，用音乐和表演传递自信与多元的价值观。他的作品风格多变，既有直击人心的摇滚旋律，也有细腻感性的流行叙事。</p>
+                    <p>除了音乐创作，Hanni在时尚领域也极具影响力，频繁受邀参与各类时尚活动，成为年轻一代追逐的潮流符号。</p>
+                    <div class="tags">
+                        <span class="tag">原创音乐</span>
+                        <span class="tag">摇滚</span>
+                        <span class="tag">舞台表演</span>
+                        <span class="tag">时尚先锋</span>
+                        <span class="tag">独立文化</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works" class="works-section">
+            <div class="container">
+                <h2 class="section-title">精选作品</h2>
+                <div class="works-grid">
+                    <!-- Work 1 -->
+                    <article class="work-card">
+                        <div class="work-thumb">
+                            <img src="https://picsum.photos/seed/music1/400/300" alt="音乐作品封面">
+                        </div>
+                        <div class="work-info">
+                            <h3>《蜕变》EP</h3>
+                            <p>首张个人原创EP，收录了三首关于成长与突破的摇滚单曲。</p>
+                        </div>
+                    </article>
+                    <!-- Work 2 -->
+                    <article class="work-card">
+                        <div class="work-thumb">
+                            <img src="https://picsum.photos/seed/concert/400/300" alt="演唱会现场">
+                        </div>
+                        <div class="work-info">
+                            <h3>2023 巡回演唱会</h3>
+                            <p>全国巡演现场实录，展现震撼的舞台爆发力与视觉设计。</p>
+                        </div>
+                    </article>
+                    <!-- Work 3 -->
+                    <article class="work-card">
+                        <div class="work-thumb">
+                            <img src="https://picsum.photos/seed/fashion/400/300" alt="时尚大片">
+                        </div>
+                        <div class="work-info">
+                            <h3>先锋时尚大片</h3>
+                            <p>与顶级时尚杂志合作拍摄，诠释先锋潮流穿搭风格。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Section -->
+        <section id="highlights" class="highlights-section container">
+            <h2 class="section-title">重要动态</h2>
+            <div class="highlight-list">
+                <div class="highlight-item">
+                    <div class="highlight-date">
+                        <span class="day">15</span>
+                        <span class="month">10月</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="highlight-content">
+                        <h3>发布全新单曲《无界》</h3>
+                        <p>正式发布个人全新摇滚单曲《无界》，MV上线当日播放量突破百万。这首歌象征着打破界限，追求自由的创作理念。</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-date">
+                        <span class="day">02</span>
+                        <span class="month">08月</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="highlight-content">
+                        <h3>受邀参加潮流音乐节</h3>
+                        <p>作为压轴嘉宾亮相年度潮流音乐节，在现场演绎了多首经典曲目，并与现场观众进行了热烈互动。</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-date">
+                        <span class="day">10</span>
+                        <span class="month">05月</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="highlight-content">
+                        <h3>个人工作室正式成立</h3>
+                        <p>宣布成立个人创意工作室，致力于推动独立音乐与潮流文化的融合与发展。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container faq-container">
+                <h2 class="section-title">常见问题</h2>
+                <div class="faq-item">
+                    <div class="faq-question">在哪里可以收听韩佩泉的音乐作品？</div>
+                    <div class="faq-answer">您可以在各大主流音乐平台（如网易云音乐、QQ音乐、酷狗音乐等）搜索“韩佩泉”或“Hanni”进行收听。所有官方发行的专辑和单曲均已上线。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何获取最新的演出资讯？</div>
+                    <div class="faq-answer">建议关注本站的“重要动态”栏目以及官方社交媒体账号，我们会第一时间发布巡演时间和购票信息。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">是否接受商业合作或演出邀约？</div>
+                    <div class="faq-answer">是的，韩佩泉的工作室目前接受各类商业合作与演出邀约。请通过官方邮箱与我们联系：contact@hanni-official.com</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">HAN<span>NI</span></div>
+                <div class="social-links">
+                    <a href="#" aria-label="微博">微博</a>
+                    <a href="#" aria-label="抖音">抖音</a>
+                    <a href="#" aria-label="B站">B站</a>
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 韩佩泉个人官方网站. All Rights Reserved. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('show');
+        }
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('nav-list').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
